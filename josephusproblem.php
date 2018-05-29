@@ -1,10 +1,8 @@
 <?php
-    $first = 1;
-    function Josephus($person) {
-        while($first != $person) {
-            $first + 2;
-        }
-        echo "$first";
+    function josephus($n,$k){
+        if($n ==1)
+            return 1;
+        else
+            return (josephus($n-1,$k)+$k-1) % $n+1;
     }
-    Josephus(5);
 ?>
